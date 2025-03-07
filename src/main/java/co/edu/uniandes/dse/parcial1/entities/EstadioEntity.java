@@ -17,6 +17,7 @@ public class EstadioEntity extends BaseEntity {
     private String nombre;
     private String nombreCiudad;
     private Long precioAlquiler;
+    private int capacidad;
 
     @PodamExclude
     @OneToMany(mappedBy = "estadio", cascade = CascadeType.PERSIST, orphanRemoval = true)
