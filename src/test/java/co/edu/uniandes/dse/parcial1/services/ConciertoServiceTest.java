@@ -14,14 +14,14 @@ import uk.co.jemos.podam.api.PodamFactoryImpl;
 
 public class ConciertoServiceTest {
     @Autowired
-    private ConciertoService authorService;
+    private ConciertoService conciertoService;
 
     @Autowired
     private TestEntityManager entityManager;
 
     private PodamFactory factory = new PodamFactoryImpl();
 
-    private List<ConciertoEntity> authorList = new ArrayList<>();
+    private List<ConciertoEntity> conciertoList = new ArrayList<>();
 
     /**
      * Configuración inicial de la prueba.
@@ -46,9 +46,9 @@ public class ConciertoServiceTest {
      */
     private void insertData() {
         for (int i = 0; i < 3; i++) {
-            ConciertoEntity authorEntity = factory.manufacturePojo(ConciertoEntity.class);
-            entityManager.persist(authorEntity);
-            authorList.add(authorEntity);
+            ConciertoEntity conciertoEntity = factory.manufacturePojo(ConciertoEntity.class);
+            entityManager.persist(conciertoEntity);
+            conciertoList.add(conciertoEntity);
         }
     }
 
